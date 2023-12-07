@@ -1,0 +1,55 @@
+package com.camerarental.bean;
+
+public class Camera {
+	private static int n=1;
+	
+	private final int cameraId;
+	private String name;
+	private int model;
+	private float perdayprice;
+	
+	public Camera(int cameraId, String name, int model, float perdayprice) {
+		super();
+		this.cameraId=cameraId;
+		this.name = name;
+		this.model = model;
+		this.perdayprice = perdayprice;
+	}
+	public int getCameraId() {
+		return cameraId;
+	}
+	public void setCameraId(int cameraId) {
+		this.cameraId = cameraId;
+		
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getModel() {
+		return model;
+	}
+	public void setModel(int model) {
+		this.model = model;
+	}
+	public float getPerdayprice() {
+		return perdayprice;
+	}
+	public void setPerdayprice(float perdayprice) {
+		this.perdayprice = perdayprice;
+	}
+	
+	public Camera() {
+		this.cameraId=n;
+		n++;
+	}
+	@Override
+	public String toString() {
+		return "Camera [cameraId=" + cameraId + ", name=" + name + ", model=" + model + ", perdayprice=" + perdayprice
+				+ "]";
+	}
+	
+
+}

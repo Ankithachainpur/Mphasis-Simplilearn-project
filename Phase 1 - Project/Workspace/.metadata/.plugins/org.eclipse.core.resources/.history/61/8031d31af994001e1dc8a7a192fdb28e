@@ -1,0 +1,17 @@
+package com.camerarental.service;
+import java.util.Scanner;
+
+import com.camerarental.bean.Camera;
+import com.camerarental.details.CameraDetails;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+public class CameraService {
+	 Scanner sc=new Scanner(System.in);
+	
+	
+
+	
+
+}

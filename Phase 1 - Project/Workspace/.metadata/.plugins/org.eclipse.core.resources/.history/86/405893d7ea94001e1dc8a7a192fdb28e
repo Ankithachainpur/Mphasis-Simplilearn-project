@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CameraRentalApp {
+ public static List<Camera> cameraList = new ArrayList<>();
+ private static Wallet wallet = new Wallet();
+ public static void main(String[] args) {
+ boolean exit = false;
+ Scanner scanner = new Scanner(System.in);
+ displayWelcomeScreen();
+ manageMainMenu();
+ 
+ 
+ 
+ scanner.close();
+ }

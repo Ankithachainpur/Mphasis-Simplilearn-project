@@ -1,0 +1,74 @@
+package com.camerarental.details;
+import java.util.Scanner;
+import com.camerarental.bean.Camera;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
+public class CameraDetails {
+	List<Camera> listofcamera= new ArrayList<>();
+	static Scanner sc=new Scanner(System.in);
+	public  void AddDetails() {
+	
+		
+		System.out.println("Enter the camera brand - ");
+		String name=sc.next();
+		System.out.println("Enter the Model:");
+		int model=sc.nextInt();
+		System.out.println("Enter the per day price:");
+		float perdayprice=sc.nextFloat();
+		Camera cc=new Camera();
+		cc.setName(name);
+		cc.setModel(model);
+		cc.setPerdayprice(perdayprice);
+		listofcamera.add(cc);
+		System.out.println("your camera has been successfully added to the list");
+		
+	}
+	public  void removeCamera() {
+		Iterator<Camera> li = listofcamera.iterator();
+		while(li.hasNext()) {
+			Camera cc=li.next();
+			System.out.println("Enter the camera id to remove");
+			int c=sc.nextInt();
+			if(cc.getCameraId()==c) {
+				li.remove();
+			}
+			System.out.println("camera successfully removed from the list");
+			break;
+		}
+	}
+	public void viewCamera() {
+		Iterator<Camera> li = listofcamera.iterator();
+		while(li.hasNext()) {
+			Camera cc=li.next();
+			System.out.println(cc);
+			
+		}
+	}
+	public   void CameraRent() {
+		Iterator<Camera> li=listofcamera.iterator();
+		while(li.hasNext()) {
+			Camera cc=li.next();
+			System.out.println("enter the camera id you want to rent:");
+			int c=sc.nextInt();
+			if(cc.getCameraId()==c ) {
+				if(cc.getStatus()=="Available") {
+					System.out.println("your transaction for camera "+cc.getName()+cc.getModel()+"with rent INR"+cc.getPerdayprice()+"has successfully completed");
+					
+				}
+				cc.setStatus("Rental");
+				
+				
+			}
+		
+			
+		}
+		
+
+		
+	}
+	
+	
+
+}

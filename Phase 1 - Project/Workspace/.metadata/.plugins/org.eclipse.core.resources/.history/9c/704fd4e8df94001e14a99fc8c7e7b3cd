@@ -1,0 +1,13 @@
+package com.camerarental.main;
+import com.camerarental.login.CameraShow;
+public class CameraApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("-------------------");
+		System.out.println("Welcome to camera rental app");
+		System.out.println("-------------------");
+         CameraShow.login();
+	}
+
+}

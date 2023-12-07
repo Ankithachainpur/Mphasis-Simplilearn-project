@@ -1,0 +1,41 @@
+package com.camerarental.bean;
+
+public class Camera {
+	String name;
+	int model;
+	float perdayprice;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getModel() {
+		return model;
+	}
+	public void setModel(int model) {
+		this.model = model;
+	}
+	public float getPerdayprice() {
+		return perdayprice;
+	}
+	public void setPerdayprice(float perdayprice) {
+		this.perdayprice = perdayprice;
+	}
+	public Camera() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Camera(String name, int model, float perdayprice) {
+		super();
+		this.name = name;
+		this.model = model;
+		this.perdayprice = perdayprice;
+	}
+	@Override
+	public String toString() {
+		return "Camera [name=" + name + ", model=" + model + ", perdayprice=" + perdayprice + "]";
+	}
+	
+
+}

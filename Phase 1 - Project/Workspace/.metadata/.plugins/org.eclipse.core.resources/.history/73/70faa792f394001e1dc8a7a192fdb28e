@@ -1,0 +1,33 @@
+package com.camerarental.bean;
+
+class Camera {
+	 private String name;
+	 private String model;
+	 private double perdayprice;
+	 private boolean isRented;
+	 public Camera(String brand, String model, double perDayPrice) {
+	 this.name= brand;
+	 this.model = model;
+	 this.perdayprice = perdayprice;
+	 this.isRented = false;
+	 }
+	 public String getname() {//getters 
+	 return name;
+	 }
+	 public String getModel() {
+	 return model;
+	 }
+	 public double getPerdayprice() {
+	 return perdayprice;
+	 }
+	 public boolean isRented() {
+	 return isRented;
+	 }
+	 public void setRented(boolean rented) {
+	 isRented = rented;
+	 }
+	 @Override
+	 public String toString() {
+	 return name + " " + model + " - " + perdayprice;
+	 }
+	}
